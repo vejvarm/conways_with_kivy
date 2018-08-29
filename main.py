@@ -7,15 +7,13 @@ from kivy.uix.button import Button
 from kivy.properties import ListProperty
 from kivy.clock import Clock
 
-SIZE = 100
+SIZE = 30
 
 
 class UILayout(BoxLayout):
 
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
-#        self.add_widget(Grid())
-#        self.add_widget(Menu())
+    def __init__(self):
+        super().__init__()
 
 
 class Grid(GridLayout):
@@ -48,7 +46,8 @@ class Grid(GridLayout):
         for row in range(SIZE):
             for col in range(SIZE):
                 if self.cells[row, col]:  # if cell is alive subtract 1
-                    self.neighbours[(row, col)] = np.sum(self.cells[max(row - 1, 0):row + 2, max(col - 1, 0):col + 2]) - 1
+                    self.neighbours[(row, col)] = np.sum(
+                        self.cells[max(row - 1, 0):row + 2, max(col - 1, 0):col + 2]) - 1
                 else:
                     self.neighbours[(row, col)] = np.sum(self.cells[max(row - 1, 0):row + 2, max(col - 1, 0):col + 2])
 
@@ -67,7 +66,7 @@ class Grid(GridLayout):
                     self.cells[row, col] = False
 
                 # update the colour of the Cells depending on their state
-                self.children[-SIZE*row - col - 1].background_color = self.Colours[self.cells[row, col]]
+                self.children[-SIZE * row - col - 1].background_color = self.Colours[self.cells[row, col]]
 
     def clear(self):
         self.cells = np.zeros((SIZE, SIZE), dtype='bool')
@@ -96,9 +95,6 @@ class GridEntry(Button):
     coords = ListProperty([0, 0])
 
 
-
-
-
 class Menu(BoxLayout):
     pass
 
@@ -107,6 +103,7 @@ class ConwayApp(App):
 
     def build(self):
         return UILayout()
+
 
 if __name__ == '__main__':
     conApp = ConwayApp()
