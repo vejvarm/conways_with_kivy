@@ -1,0 +1,33 @@
+<MyLayout>:
+    mywidge: widget # reference to MyWidget
+    orientation: "horizontal"
+    id: mylayout
+    spacing: 10
+    padding: 10
+
+    MyWidget:
+        id: widget
+        size: (600, 600)
+        size_hint: (None, None)
+
+    BoxLayout:
+        orientation: "vertical"
+
+        Button:
+            text: "Generate Random"
+            on_press: widget.generate_random()
+
+        Button:
+            text: "Start"
+            on_press: widget.schedule_generation(run=True)
+
+        Button:
+            text: "Stop"
+            on_press: widget.schedule_generation(run=False)
+
+        Button:
+            text: "Clear canvas"
+            on_press: widget.clear_canvas()
+
+<MyWidget>:
+    id: my_widget

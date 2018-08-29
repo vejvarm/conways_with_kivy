@@ -90,6 +90,6 @@ class ConwayApp(App):
         self.mL.mywidge.update_canvas()
         return self.mL
 
-
-conApp = ConwayApp()
-conApp.run()
+if __name__ == '__main__':
+    conApp = ConwayApp()
+    conApp.run()

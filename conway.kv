@@ -1,33 +1,47 @@
-<MyLayout>:
-    mywidge: widget # reference to MyWidget
-    orientation: "horizontal"
-    id: mylayout
-    spacing: 10
-    padding: 10
+<CustButton@Button>:
+    font_size: 32
+    background_color: (0.3, 0.3, 1, 0.5)
 
-    MyWidget:
-        id: widget
-        size: (600, 600)
-        size_hint: (None, None)
+<UILayout>:
+    id: layout
+    orientation: "vertical"
 
-    BoxLayout:
-        orientation: "vertical"
+    Grid:
+        id: grid
+        tgl: btn_tgl
+        cols: self.cols
 
-        Button:
-            text: "Generate Random"
-            on_press: widget.generate_random()
+    Menu:
+        id: menu
+        orientation: "horizontal"
+        size_hint: (1, 0.1)
 
-        Button:
-            text: "Start"
-            on_press: widget.schedule_generation(run=True)
+        CustButton:
+            id: btn_random
+            text: 'Random'
+            on_release: grid.random()
 
-        Button:
-            text: "Stop"
-            on_press: widget.schedule_generation(run=False)
+        CustButton:
+            id: btn_clear
+            text: 'Clear'
+            on_release: grid.clear()
 
-        Button:
-            text: "Clear canvas"
-            on_press: widget.clear_canvas()
+        CustButton:
+            id: btn_next
+            text: 'Next Gen'
+            on_release: grid.next_generation()
 
-<MyWidget>:
-    id: my_widget
+        ToggleButton:
+            id: btn_tgl
+            text: 'Auto-Run'
+            on_state: grid.auto_run()
+
+<GridEntry>:
+    font_size: self.height
+    background_color: (0.1, 0.1, 0.1, 1)
+    size: (10,10)
+
+
+
+
+
