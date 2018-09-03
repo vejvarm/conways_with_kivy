@@ -23,4 +23,6 @@
   Initial GUI design inspired by Amanda Hogan's <a href="https://www.youtube.com/watch?v=5on8Ybe41tE">A Basic Conways implementation in Kivy</a>.
   
   I also recommend this great <a href="https://youtu.be/B79miUFD_ss">Kivy Tutorial</a> by Derek Banas for anyone who is new to Kivy and would like to start learning it.
+  
+  For a demonstration video of the app, visit my <a href="https://www.youtube.com/watch?v=k9kcgdP8aLY">YouTube channel</a>.
 </p>
