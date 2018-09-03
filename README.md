@@ -16,9 +16,11 @@
 </p>
 
 <p>
-  If you want a smaller or bigger grid of cells, you can manually change the SIZE variable in the main.py file. For higher SIZE numbers the app is very memory consuming. I wouldn't recommend sizes over 100x100.
+  If you want a smaller or bigger grid of cells, you can manually change the FIELD instance variables rows and cols of named tuple field in the main.py file. For higher (rows, cols) numbers the app is very memory consuming. I wouldn't recommend sizes over 100x100.
 </p>
 
 <p>
-  Initial GUI design inspired by Amanda Hogan's <a href="https://www.youtube.com/watch?v=5on8Ybe41tE">A Basic Conways implementation in Kivy</a>.   
+  Initial GUI design inspired by Amanda Hogan's <a href="https://www.youtube.com/watch?v=5on8Ybe41tE">A Basic Conways implementation in Kivy</a>.
+  
+  I also recommend this great <a href="https://youtu.be/B79miUFD_ss">Kivy Tutorial</a> by Derek Banas for anyone who is new to Kivy and would like to start learning it.
 </p>
