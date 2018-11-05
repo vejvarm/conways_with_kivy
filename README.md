@@ -1,8 +1,12 @@
 <h1>Conway's game of life utilizing <a href="https://kivy.org">Kivy</a> GUI framework</h1>
 
-<h2> Running the app</h2>
+## Requirements
+* <a href="https://kivy.org/doc/stable/gettingstarted/installation.html">Kivy</a>
+* <a href="http://www.numpy.org/">NumPy</a>
+
+## Running the app
 <p>
-  Run main.py with <a href="https://kivy.org">Kivy</a> and <a href="http://www.numpy.org/">NumPy</a> modules installed in your Python 3 interpreter.
+  Run main.py in Python 3 environment with required modules installed.
 </p>
 
 <p>
@@ -19,6 +23,7 @@
   If you want a smaller or bigger grid of cells, you can manually change the FIELD instance variables rows and cols of named tuple field in the main.py file. For higher (rows, cols) numbers the app is very memory consuming. I wouldn't recommend sizes over 100x100.
 </p>
 
+## References
 <p>
   Initial GUI design inspired by Amanda Hogan's <a href="https://www.youtube.com/watch?v=5on8Ybe41tE">A Basic Conways implementation in Kivy</a>.
   
